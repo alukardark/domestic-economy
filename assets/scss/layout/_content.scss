@@ -592,6 +592,12 @@
     justify-content: space-between;
     margin: 0 17px;
     position: relative;
+    &--hot{
+      background: rgba(242, 206, 206, 0.6);
+    }
+    &--auction{
+      background: #F8EECA;
+    }
   }
   &__favorites-img {
     background-repeat: no-repeat;
@@ -659,8 +665,65 @@
     &--yes{
       background-image: url(../img/like-y.svg);
     }
-    &:hover{
-      background-image: url(../img/like.svg);
+    &:hover {
+      background-image: url(../img/like-y.svg);
+    }
+    &--yes {
+      background-image: url(../img/like-y.svg);
+      &:hover {
+        background-image: url(../img/like.svg);
+      }
+    }
+  }
+  &__favorites-like-markers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    li {
+      font-weight: bold;
+      font-size: 14px;
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 1px 11px;
+      position: relative;
+      margin-bottom: 4px;
+      &.domestic-economy__favorites-like-markers--hot{
+        background: #FB066B;
+        padding-right: 23px;
+        padding-left: 32px;
+        &:before{
+          content: '';
+          left: 0;
+          bottom: 0;
+          position: absolute;
+          width: 29px;
+          height: 42px;
+          background: url(../img/ico-hot.svg) center no-repeat;
+        }
+      }
+      &.domestic-economy__favorites-like-markers--auction{
+        background: #D4A222;
+        padding-right: 23px;
+        padding-left: 32px;
+        &:before{
+          content: '';
+          left: -7px;
+          bottom: -6px;
+          position: absolute;
+          width: 37px;
+          height: 37px;
+          background: url(../img/ico-auction.svg) center no-repeat;
+        }
+      }
+      &.domestic-economy__favorites-like-markers--collective-lots{
+        background: #27C6F0;
+      }
+      &.domestic-economy__favorites-like-markers--new{
+        background: #4BC389;
+      }
     }
   }
 }

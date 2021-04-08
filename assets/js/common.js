@@ -22,5 +22,9 @@ jQuery(document).ready(function ($) {
         $('.domestic-economy__wrapper').toggleClass('domestic-economy__overload--active');
     });
 
+    $(".domestic-economy__filter-active").click(function(){
+        $(this).next('ul').slideToggle(200);
+    });
+
 
 });

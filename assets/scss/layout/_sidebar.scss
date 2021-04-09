@@ -1,5 +1,5 @@
 .domestic-economy {
-  &__overload {
+  &__sidebar {
     width: 50%;
     min-width: 930px;
     position: fixed;
@@ -12,6 +12,10 @@
     transition: .5s ease-in-out right, .5s ease-in-out transform;
     &.active{
       transform: translateX(-0%);
+      &+.domestic-economy__overlay{
+        height: 100%;
+        opacity: .4;
+      }
     }
     h2 {
       font-weight: 300;
@@ -23,20 +27,24 @@
     &--active {
       overflow-y: hidden;
       //position: fixed;
-      &:after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 9;
-      }
     }
-
   }
-  &__overload-wrap {
+  &__overlay{
+    background: #000;
+    opacity: 0;
+    transition-duration: .3s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.47,0,.74,.71);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 0;
+    z-index: 9;
+  }
+
+  &__sidebar-wrap {
     height: 100%;
     width: 100%;
     overflow-y: auto;
@@ -44,7 +52,7 @@
     box-shadow: -20px 4px 34px rgba(0, 0, 0, 0.1);
     padding: 35px 45px 45px;
   }
-  &__overload-close {
+  &__sidebar-close {
     border: 4px solid #FFFFFF;
     outline: none;
     border-radius: 50%;
@@ -87,7 +95,7 @@
       }
     }
   }
-  &__overload-content {
+  &__sidebar-content {
     background: #fff;
     padding: 30px 35px 22px;
     margin-bottom: 22px;
@@ -121,14 +129,14 @@
     }
 
   }
-  &__overload-list-can {
+  &__sidebar-list-can {
     & > li {
       &:before {
         background: #4BC389;
       }
     }
   }
-  &__overload-list-impossible {
+  &__sidebar-list-impossible {
     & > li {
       &:before {
         background: #FF5752;
@@ -136,7 +144,7 @@
     }
   }
 
-  a.domestic-economy__overload-link-acquainted{
+  a.domestic-economy__sidebar-link-acquainted{
     max-width: 432px;
     width: 100%;
     height: 56px;
@@ -157,23 +165,23 @@
 
 @media (max-width: 1200px) {
   .domestic-economy {
-    &__overload {
+    &__sidebar {
       width: 100%;
       min-width: auto;
-     &__overload--active:after{
+     &__sidebar--active:after{
         display: none;
       }
     }
-    &__overload-wrap{
+    &__sidebar-wrap{
       padding: 15px 15px 15px;
     }
-    &__overload-content{
+    &__sidebar-content{
       padding: 25px 15px 5px;
     }
-    a.domestic-economy__overload-link-acquainted{
+    a.domestic-economy__sidebar-link-acquainted{
       font-size: 16px;
     }
-    &__overload-close {
+    &__sidebar-close {
       top: 10px;
       left: auto;
       right: 15px;

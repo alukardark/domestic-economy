@@ -1,11 +1,11 @@
 .domestic-economy {
   &__catalog {
     background: #fff;
-    padding: 20px 35px;
+    padding: 20px 30px;
   }
   &__catalog-banner {
     background: linear-gradient(269.61deg, rgba(30, 82, 39, 0.79) 15.47%, #6E9C58 26.35%), #56855E;
-    padding: 0 35px;
+    padding: 0 30px;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -109,6 +109,7 @@
     position: relative;
     min-width: 200px;
     text-align: right;
+    margin-right: 20px;
     & > ul {
       display: none;
       position: absolute;
@@ -380,7 +381,10 @@
 @media (max-width: 1300px) {
   .domestic-economy {
     &__catalog {
-      padding: 10px 25px;
+      padding: 10px 20px;
+    }
+    &__catalog-banner{
+      padding: 0 20px;
     }
     &__catalog-item {
       width: 30%;

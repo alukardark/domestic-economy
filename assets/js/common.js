@@ -35,10 +35,10 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.domestic-economy__about-btn, .domestic-economy__overload-close').click(function(e){
+    $('.domestic-economy__about-btn, .domestic-economy__sidebar-close').click(function(e){
         e.preventDefault();
-        $('.domestic-economy__overload').toggleClass('active');
-        $('.domestic-economy__wrapper').toggleClass('domestic-economy__overload--active');
+        $('.domestic-economy__sidebar').toggleClass('active');
+        $('.domestic-economy__wrapper').toggleClass('domestic-economy__sidebar--active');
     });
 
     $(".domestic-economy__filter-active").click(function(){

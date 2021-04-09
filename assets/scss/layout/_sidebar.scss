@@ -1,18 +1,30 @@
 .domestic-economy {
+  &__w-100 {
+    width: 100%;
+  }
+  &__d-flex {
+
+  }
+  &__align-center {
+    display: flex;
+    align-items: center;
+  }
   &__sidebar {
     width: 50%;
     min-width: 930px;
     position: fixed;
-    height: 100vh;
+    //height: 100vh;
     height: 100%;
     top: 0;
     right: 0;
     transform: translateX(calc(100% + 100px));
+    box-shadow: -20px 4px 34px rgba(0, 0, 0, 0.0);
     z-index: 10;
-    transition: .5s ease-in-out right, .5s ease-in-out transform;
-    &.active{
+    transition: .2s ease-in-out box-shadow, .5s ease-in-out right, .5s ease-in-out transform, .5s ease-in-out opacity;
+    &.active {
       transform: translateX(-0%);
-      &+.domestic-economy__overlay{
+      box-shadow: -20px 4px 34px rgba(0, 0, 0, 0.1);
+      & + .domestic-economy__overlay {
         height: 100%;
         opacity: .4;
       }
@@ -25,16 +37,20 @@
       margin-bottom: 25px;
     }
     &--active {
-      overflow-y: hidden;
-      //position: fixed;
+      //overflow-y: hidden;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
     }
   }
-  &__overlay{
+  &__overlay {
     background: #000;
     opacity: 0;
     transition-duration: .3s;
     transition-property: opacity;
-    transition-timing-function: cubic-bezier(.47,0,.74,.71);
+    transition-timing-function: cubic-bezier(.47, 0, .74, .71);
     bottom: 0;
     left: 0;
     position: fixed;
@@ -43,7 +59,6 @@
     height: 0;
     z-index: 9;
   }
-
   &__sidebar-wrap {
     height: 100%;
     width: 100%;
@@ -98,13 +113,11 @@
   &__sidebar-content {
     background: #fff;
     padding: 30px 35px 22px;
-    margin-bottom: 22px;
+
     h3 {
       font-weight: bold;
       font-size: 20px;
       line-height: 27px;
-      text-transform: uppercase;
-      color: #000000;
       margin-bottom: 17px;
     }
     ul {
@@ -129,6 +142,23 @@
     }
 
   }
+  a.domestic-economy__sidebar-btn {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #27C6F0;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+    max-width: 355px;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+      color: #fff;
+      opacity: .75;
+    }
+  }
   &__sidebar-list-can {
     & > li {
       &:before {
@@ -144,7 +174,7 @@
     }
   }
 
-  a.domestic-economy__sidebar-link-acquainted{
+  a.domestic-economy__sidebar-link-acquainted {
     max-width: 432px;
     width: 100%;
     height: 56px;
@@ -156,11 +186,237 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    &:hover{
+    margin-top: 22px;
+    &:hover {
       color: #fff;
       opacity: .75;
     }
   }
+
+  &__sidebar-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-top: 65px;
+    h3 {
+      margin: 0;
+    }
+  }
+  &__sidebar-you-get {
+    border: 2px solid #4BC389;
+    border-radius: 45px;
+    font-weight: bold;
+    font-size: 21px;
+    color: #4BC389;
+    height: 31px;
+    line-height: 1.3;
+    padding: 0 19px;
+    margin-left: 15px;
+    i {
+      width: 16px;
+      height: 16px;
+      background: url(../img/currency-green.svg) center/contain no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__sidebar-result {
+    padding: 30px 35px 65px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    form {
+      width: 100%;
+      display: flex;
+      margin-top: 25px;
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 130px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-bottom: 17px;
+      }
+      input[type="submit"] {
+        color: #fff;
+        outline: none;
+        border: none;
+        width: 112px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        background: #27C6F0;
+        border-radius: 1px;
+        text-transform: uppercase;
+        transition: .2s ease-in-out opacity;
+        margin-right: 13px;
+        &:hover {
+          opacity: .75;
+
+        }
+      }
+    }
+  }
+  &__sidebar-result-avatar {
+    margin-right: 6px;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__sidebar-result-cancel {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3E3E3E;
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  .domestic-economy__sidebar-help-wrap {
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 35px 0px;
+  }
+  ul.domestic-economy__sidebar-help {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 30%;
+      margin-right: 5%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 150%;
+        margin: 0;
+        max-width: 250px;
+      }
+    }
+  }
+  &__sidebar-help-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 66px;
+    height: 66px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+  &__sidebar-help-info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__sidebar-help-name {
+    font-size: 13px;
+    line-height: 150%;
+    color: #1069C4;
+  }
+  &__sidebar-help-specialty {
+    font-size: 13px;
+    line-height: 150%;
+    color: #727171;
+  }
+
+  a.domestic-economy__sidebar-fast-activity {
+    font-weight: 600;
+    font-size: 18px;
+    width: 263px;
+    height: 51px;
+    background: #FF7373 url("../img/time.svg") 17px 50%/25px 28px no-repeat;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    color: #fff;
+    padding-left: 25px;
+    &:hover {
+      opacity: .75;
+    }
+  }
+  &__sidebar-end-time {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    span {
+      color: #FF7373;
+    }
+    &:before {
+      content: '';
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url(../img/ico-time-red.svg) center/contain no-repeat;
+    }
+  }
+
+  ul.domestic-economy__sidebar-info {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      background: url(../img/ico-people.svg) center/contain no-repeat;
+      width: 18px;
+      height: 14px;
+      margin-right: 6px;
+    }
+    & > li {
+      padding-left: 27px;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 12px;
+      color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      strong {
+        font-weight: 800;
+        margin-right: 5px;
+      }
+    }
+  }
+  ul.domestic-economy__sidebar-avatars {
+    margin: 0;
+
+    display: inline-block;
+    vertical-align: middle;
+    & > li {
+      padding: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0;
+      margin-right: 9px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -168,17 +424,23 @@
     &__sidebar {
       width: 100%;
       min-width: auto;
-     &__sidebar--active:after{
+      &__sidebar--active:after {
         display: none;
       }
     }
-    &__sidebar-wrap{
+    &__sidebar-wrap {
       padding: 15px 15px 15px;
     }
-    &__sidebar-content{
+    &__sidebar-content {
       padding: 25px 15px 5px;
     }
-    a.domestic-economy__sidebar-link-acquainted{
+    &__sidebar-result {
+      padding: 25px 15px 45px;
+    }
+    .domestic-economy__sidebar-help-wrap {
+      padding: 25px 15px 0;
+    }
+    a.domestic-economy__sidebar-link-acquainted {
       font-size: 16px;
     }
     &__sidebar-close {
@@ -192,5 +454,34 @@
         background: #27C6F0;
       }
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .domestic-economy {
+    &__sidebar-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__sidebar-btn{
+      margin-top: 25px;
+    }
+    &__align-center{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+     a.domestic-economy__sidebar-fast-activity{
+       margin-bottom: 10px;
+    }
+    &__sidebar-you-get{
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    ul.domestic-economy__sidebar-help {
+      li {
+        width: 100%;
+      }
+    }
+
   }
 }

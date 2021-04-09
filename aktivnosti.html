@@ -12,8 +12,7 @@
 <body>
 
 <div class="domestic-economy">
-
-    <div class="domestic-economy__wrapper">
+    <div class="domestic-economy__wrapper ">
         <div class="domestic-economy__header">
             <h2>Активности</h2>
             <div class="domestic-economy__header-aside">
@@ -36,6 +35,7 @@
                 </div>
             </div>
         </div>
+
         <div class="domestic-economy__activity-wrap">
             <ul class="domestic-economy__activity-filter">
                 <li>
@@ -97,7 +97,7 @@
             </ul>
             <ul class="domestic-economy__activity-list">
                 <li>
-                    <a href="#">
+                    <a href="#" data-sidebar="activity-1">
                         <div class="domestic-economy__activity-content">
                             <div class="domestic-economy__activity-img domestic-economy--red">
                                 <img src="assets/img/time.svg">
@@ -129,7 +129,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" data-sidebar="activity-2">
                         <div class="domestic-economy__activity-content">
                             <div class="domestic-economy__activity-img domestic-economy--red">
                                 <img src="assets/img/time.svg">
@@ -239,7 +239,6 @@
                         </div>
                     </a>
                 </li>
-
                 <li>
                     <a href="#">
                         <div class="domestic-economy__activity-content">
@@ -300,7 +299,6 @@
                         </div>
                     </a>
                 </li>
-
                 <li>
                     <a href="#">
                         <div class="domestic-economy__activity-content">
@@ -360,7 +358,6 @@
                         </div>
                     </a>
                 </li>
-
                 <li>
                     <a href="#">
                         <div class="domestic-economy__activity-content">
@@ -423,48 +420,162 @@
             </ul>
         </div>
 
-        <div class="domestic-economy__sidebar">
+
+        <div class="domestic-economy__sidebar " id="activity-1">
             <div class="domestic-economy__sidebar-wrap">
-                <h2>Правила</h2>
+                <h2>Активность: <strong>Своевременное обновление данных</strong></h2>
+
+                <div class="domestic-economy__sidebar-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <br>
+                    <h3>Условия</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+
+                    <div class="domestic-economy__sidebar-row ">
+                        <div class="domestic-economy__align-center">
+                            <h3>Вы получите:</h3>
+                            <div class="domestic-economy__sidebar-you-get">+1 999 <i></i></div>
+                        </div>
+                        <a href="#" class="domestic-economy__sidebar-btn">сообщить о выполнении</a>
+                    </div>
+
+                </div>
+
+                <div class="domestic-economy__sidebar-result">
+                    <h3>Результат выполнения</h3>
+
+                    <form>
+                        <div class="domestic-economy__sidebar-result-avatar"
+                             style="background-image: url(assets/img/avatars/avatar-1.png);"></div>
+                        <div class="domestic-economy__w-100">
+                            <textarea></textarea>
+                            <input type="submit" value="Отправить">
+                            <a href="#" class="domestic-economy__sidebar-result-cancel">Отменить</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="domestic-economy__sidebar-help-wrap">
+                    <ul class="domestic-economy__sidebar-help">
+                        <li>
+                            <p>Если возникли трудности&nbsp;обратитесь к:</p>
+                        </li>
+                        <li>
+                            <div class="domestic-economy__sidebar-help-img"
+                                 style="background-image: url(assets/img/avatars/avatar-2.png);"></div>
+                            <div class="domestic-economy__sidebar-help-info">
+                                <div class="domestic-economy__sidebar-help-name">Иванов Александр</div>
+                                <div class="domestic-economy__sidebar-help-specialty">Начальник отдела</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="domestic-economy__sidebar-help-img"
+                                 style="background-image: url(assets/img/avatars/avatar-3.png);"></div>
+                            <div class="domestic-economy__sidebar-help-info">
+                                <div class="domestic-economy__sidebar-help-name">Иванов Александр</div>
+                                <div class="domestic-economy__sidebar-help-specialty">Начальник отдела</div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="domestic-economy__sidebar-close"></div>
+        </div>
+        <div class="domestic-economy__overlay "></div>
+        <div class="domestic-economy__sidebar " id="activity-2">
+            <div class="domestic-economy__sidebar-wrap">
+                <h2>Активность: <strong>Своевременное обновление данных</strong></h2>
 
                 <div class="domestic-economy__sidebar-content">
 
+                    <div class="domestic-economy__align-center">
+                        <a href="#" class="domestic-economy__sidebar-fast-activity">Быстрая активность</a>
 
-                    <h3>Что можно?</h3>
-                    <ul class="domestic-economy__sidebar-list-can">
-                        <li>Зарабатывать ломтики участвуя в различных активностях, приносящих пользу компании</li>
-                        <li>Получать ломтики за помощь коллегам</li>
-                        <li>Переводить баллы в благодарность коллегам</li>
-                        <li>Тратить ломтики во внутреннем магазине</li>
-                        <li>Участвовать в аукционах, распродажах и других акциях внутреннего магазина</li>
-                        <li>Предлагать идеи для развития, реализовывать проекты и идеи, которые не касаются работы, но принесут пользу компании. Получать за это ломтики</li>
-                        <li>Накапливать ломтики в течении неограниченного периода времени</li>
-                        <li>Покупать товары из магазина совместно с коллегами из своего отдела</li>
-                        <li>Устраивать бреин штормы в живой ленте с награждением победителя</li>
+                        <div class="domestic-economy__sidebar-end-time">
+                            <strong>До окончания: <span>8 дней</span></strong>
+                        </div>
+                    </div>
+                    <br>
 
-                    </ul>
 
-                    <h3>Что нельзя?</h3>
-                    <ul class="domestic-economy__sidebar-list-impossible">
-                        <li>
-                            Для сотрудника не допустимо устанавливать стоимость своих услуг, когда его просят о помощи. Также не допустимо просить об оплате после оказания помощи. Благодарность ломтиками должна быть добровольной. А переводы сопровождаться комментарием, поясняющим за что сотрудник благодарит коллегу.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <br>
+                    <h3>Условия</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+
+                    <ul class="domestic-economy__sidebar-info">
+                        <li><strong>Всего требуется: </strong>4 человека</li>
+                        <li><strong>Осталось: </strong>1 человек</li>
+                        <li><strong>Участники:</strong>
+                            <ul class="domestic-economy__sidebar-avatars">
+                                <li style="background-image: url(assets/img/avatars/avatar-1.png);"></li>
+                                <li style="background-image: url(assets/img/avatars/avatar-2.png);"></li>
+                                <li style="background-image: url(assets/img/avatars/avatar-3.png);"></li>
+
+                            </ul>
                         </li>
-                        <li>Сотрудники не могут обмениваться ломтиками для покупки понравившегося товара во внутреннем магазине</li>
-                        <li>Ломтики, поступающие в кошелек для благодарностей нельзя тратить на себя и покупки в магазине понравившихся товаров. Безусловно получаемые ломтики сотрудник может потратить только на благодарность коллеге.</li>
-                        <li>Нельзя обмениваться баллами, чтобы «вывести» их из кошелька для благодарности и расплачиваться в магазине. Сотрудник не может перевести ломтики из кошелька для благодарности коллеге, чтобы взамен получить от него такую же сумму ломтиков, которые попадут в кошелек для радостей</li>
-                        <li>Количество ломтиков, которые поступают от компании раз в месяц ограниченно и зависит от выполнения общего KPI</li>
-                        <li>Руководитель не может тратить в магазине ломтики, которые поступают ему для мотивации своих сотрудников</li>
-                        <li>Руководитель не может перевести ломтики сотруднику без указания заповеди, которой тот последовал</li>
                     </ul>
+
+
+                    <div class="domestic-economy__sidebar-row ">
+                        <div class="domestic-economy__align-center">
+                            <h3>Вы получите:</h3>
+                            <div class="domestic-economy__sidebar-you-get">+1 999 <i></i></div>
+                        </div>
+                        <a href="#" class="domestic-economy__sidebar-btn">заявиться на активность</a>
+                    </div>
 
                 </div>
-                <a href="#" class="domestic-economy__sidebar-link-acquainted">С информацией ознакомился</a>
+
+
+                <div class="domestic-economy__sidebar-help-wrap">
+                    <ul class="domestic-economy__sidebar-help">
+                        <li>
+                            <p>Если возникли трудности&nbsp;обратитесь к:</p>
+                        </li>
+                        <li>
+                            <div class="domestic-economy__sidebar-help-img"
+                                 style="background-image: url(assets/img/avatars/avatar-2.png);"></div>
+                            <div class="domestic-economy__sidebar-help-info">
+                                <div class="domestic-economy__sidebar-help-name">Иванов Александр</div>
+                                <div class="domestic-economy__sidebar-help-specialty">Начальник отдела</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="domestic-economy__sidebar-help-img"
+                                 style="background-image: url(assets/img/avatars/avatar-3.png);"></div>
+                            <div class="domestic-economy__sidebar-help-info">
+                                <div class="domestic-economy__sidebar-help-name">Иванов Александр</div>
+                                <div class="domestic-economy__sidebar-help-specialty">Начальник отдела</div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
             </div>
             <div class="domestic-economy__sidebar-close"></div>
         </div>
         <div class="domestic-economy__overlay "></div>
     </div>
-
 </div>
 
 <script src="assets/libs/jquery-3.6.0.min.js"></script>

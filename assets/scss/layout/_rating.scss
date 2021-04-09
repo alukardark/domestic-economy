@@ -1,0 +1,214 @@
+.domestic-economy {
+  &__rating{
+    padding: 35px 30px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    h2{
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 25px;
+      min-height: 65px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__rating-col{
+    max-width: 440px;
+    margin-right: 30px;
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      li{
+        background: #F2F7F8;
+        border-radius: 2px;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 25px;
+        &>div{
+          display: flex;
+          align-items: center;
+        }
+        &:first-of-type{
+          .domestic-economy__rating-img{
+            position: relative;
+            &:after{
+              content: '';
+              background: #D4A222 url("../img/ico-star.svg") center no-repeat;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              bottom: -2px;
+              right: -6px;
+              border-radius: 50%;
+            }
+          }
+
+        }
+        &:nth-of-type(-n+5){
+          background: #F8EECA;
+          .domestic-economy__rating-img{
+            box-sizing: content-box;
+            border: 3px solid #D4A222;
+          }
+          .domestic-economy__rating-sum{
+            color: #D4A222;
+            font-weight: 800;
+            i{
+              background-image: url("../img/currency-yellow.svg")
+            }
+          }
+        }
+      }
+    }
+  }
+  &__rating-img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 41px;
+    width: 41px;
+    min-width: 41px;
+    margin-right: 30px;
+    border-radius: 50%;
+  }
+  &__rating-name{
+    font-size: 14px;
+    color: #3E3E3E;
+  }
+  &__rating-sum{
+    font-weight: 600;
+    font-size: 16px;
+    color: #3E3E3E;
+    i{
+      width: 11px;
+      height: 11px;
+      background: url(../img/currency.svg) center/contain no-repeat;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+
+
+
+  &__rating-most-col{
+    max-width: 613px;
+    ul{
+      display: flex;
+      flex-direction: column;
+      li{
+        background: #F2F7F8;
+        border-radius: 2px;
+        margin-bottom: 2px;
+        display: flex;
+        border: 1px solid #F2F7F8;
+        &:first-of-type{
+          .domestic-economy__rating-most-picture{
+            position: relative;
+            &:after{
+              content: '';
+              background: #D4A222 url(../img/ico-star.svg) center no-repeat;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              left: 4px;
+              top: 4px;
+              border-radius: 50%;
+            }
+          }
+        }
+        &:nth-of-type(-n+3){
+          background: #F8EECA;
+          border: 1px solid #F8EECA;
+          .domestic-economy__rating-most-sum{
+            font-weight: 800;
+            color: #D4A222;
+            i{
+              background-image: url("../img/currency-yellow.svg")
+            }
+          }
+        }
+      }
+    }
+  }
+  &__rating-most-info{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__rating-most-picture{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 116px;
+    min-width: 116px;
+    min-height: 116px;
+  }
+  &__rating-most-title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+  &__rating-most-sum{
+    font-weight: 600;
+    font-size: 16px;
+    color: #3E3E3E;
+    display: flex;
+    align-items: center;
+    i{
+      width: 11px;
+      height: 11px;
+      background: url(../img/currency.svg) center/contain no-repeat;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+  &__rating-most-footer{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+  &__rating-most-name{
+    font-size: 14px;
+    color: #3E3E3E;
+    strong{
+      color: rgba(62, 62, 62, 0.3);
+      font-weight: 600;
+    }
+  }
+  &__rating-most-img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 34px;
+    width: 34px;
+    min-width: 34px;
+    margin-left: 20px;
+    border-radius: 50%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .domestic-economy {
+    &__rating{
+      padding: 25px 20px;
+    }
+
+    &__rating-col ul li{
+      padding: 8px 10px;
+    }
+    &__rating-most-info{
+      padding: 5px 10px;
+    }
+  }
+}

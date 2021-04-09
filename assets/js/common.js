@@ -16,6 +16,7 @@ jQuery(document).ready(function ($) {
         ]
     });
 
+
     $('.domestic-economy__product-slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -32,34 +33,36 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
-
-    $('.domestic-economy__about-btn, .domestic-economy__sidebar-close').click(function(e){
+    $('[data-sidebar]').click(function(e){
         e.preventDefault();
-        $('.domestic-economy__sidebar').toggleClass('active');
+        var sidebar = $(this).attr('data-sidebar');
+        $('#'+sidebar).toggleClass('active');
         $('.domestic-economy__wrapper').toggleClass('domestic-economy__sidebar--active');
     });
+    $('.domestic-economy__sidebar-close').click(function(){
+        $('.domestic-economy__sidebar.active').removeClass('active');
+        $('.domestic-economy__wrapper').removeClass('domestic-economy__sidebar--active');
+    });
+
 
     $(".domestic-economy__filter-active").click(function(){
         $(this).next('ul').slideToggle(200);
     });
 
-    $(document).ready(function() {
-        $('.domestic-economy__product-count-minus').click(function () {
-            var $input = $(this).parent().find('input');
-            var count = parseInt($input.val()) - 1;
-            count = count < 1 ? 1 : count;
-            $input.val(count);
-            $input.change();
-            return false;
-        });
-        $('.domestic-economy__product-count-plus').click(function () {
-            var $input = $(this).parent().find('input');
-            $input.val(parseInt($input.val()) + 1);
-            $input.change();
-            return false;
-        });
+
+    $('.domestic-economy__product-count-minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var $count = parseInt($input.val()) - 1;
+        $count = $count < 1 ? 1 : $count;
+        $input.val($count);
+        $input.change();
+        return false;
+    });
+    $('.domestic-economy__product-count-plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
     });
 
 

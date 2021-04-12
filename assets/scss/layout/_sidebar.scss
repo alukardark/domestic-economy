@@ -422,66 +422,66 @@
 @media (max-width: 1200px) {
   .domestic-economy {
     &__sidebar {
-      width: 100%;
-      min-width: auto;
-      &__sidebar--active:after {
-        display: none;
-      }
+      //width: 100%;
+      //min-width: auto;
+      //&__sidebar--active:after {
+      //  display: none;
+      //}
     }
-    &__sidebar-wrap {
-      padding: 15px 15px 15px;
-    }
-    &__sidebar-content {
-      padding: 25px 15px 5px;
-    }
-    &__sidebar-result {
-      padding: 25px 15px 45px;
-    }
-    .domestic-economy__sidebar-help-wrap {
-      padding: 25px 15px 0;
-    }
-    a.domestic-economy__sidebar-link-acquainted {
-      font-size: 16px;
-    }
-    &__sidebar-close {
-      top: 10px;
-      left: auto;
-      right: 15px;
-      border-color: #27C6F0;
-      background: #fff;
-      box-shadow: 0px 0px 7px 0px #a7a7a7f0;;
-      &:after, &:before {
-        background: #27C6F0;
-      }
-    }
+    //&__sidebar-wrap {
+    //  padding: 15px 15px 15px;
+    //}
+    //&__sidebar-content {
+    //  padding: 25px 15px 5px;
+    //}
+    //&__sidebar-result {
+    //  padding: 25px 15px 45px;
+    //}
+    //.domestic-economy__sidebar-help-wrap {
+    //  padding: 25px 15px 0;
+    //}
+    //a.domestic-economy__sidebar-link-acquainted {
+    //  font-size: 16px;
+    //}
+    //&__sidebar-close {
+    //  top: 10px;
+    //  left: auto;
+    //  right: 15px;
+    //  border-color: #27C6F0;
+    //  background: #fff;
+    //  box-shadow: 0px 0px 7px 0px #a7a7a7f0;;
+    //  &:after, &:before {
+    //    background: #27C6F0;
+    //  }
+    //}
   }
 }
 
-@media (max-width: 700px) {
-  .domestic-economy {
-    &__sidebar-row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    &__sidebar-btn{
-      margin-top: 25px;
-    }
-    &__align-center{
-      flex-direction: column;
-      align-items: flex-start;
-    }
-     a.domestic-economy__sidebar-fast-activity{
-       margin-bottom: 10px;
-    }
-    &__sidebar-you-get{
-      margin-left: 0;
-      margin-top: 5px;
-    }
-    ul.domestic-economy__sidebar-help {
-      li {
-        width: 100%;
-      }
-    }
-
-  }
-}
+//@media (max-width: 700px) {
+//  .domestic-economy {
+//    &__sidebar-row {
+//      flex-direction: column;
+//      align-items: flex-start;
+//    }
+//    &__sidebar-btn{
+//      margin-top: 25px;
+//    }
+//    &__align-center{
+//      flex-direction: column;
+//      align-items: flex-start;
+//    }
+//     a.domestic-economy__sidebar-fast-activity{
+//       margin-bottom: 10px;
+//    }
+//    &__sidebar-you-get{
+//      margin-left: 0;
+//      margin-top: 5px;
+//    }
+//    ul.domestic-economy__sidebar-help {
+//      li {
+//        width: 100%;
+//      }
+//    }
+//
+//  }
+//}

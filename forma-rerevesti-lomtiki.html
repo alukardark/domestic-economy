@@ -439,7 +439,8 @@
                         добровольной. А переводы сопровождаться комментарием, поясняющим за что сотрудник благодарит
                         коллегу.
                     </li>
-                    <li>Сотрудники не могут обмениваться ломтиками для покупки понравившегося товара во внутреннем магазине
+                    <li>Сотрудники не могут обмениваться ломтиками для покупки понравившегося товара во внутреннем
+                        магазине
                     </li>
                     <li>Ломтики, поступающие в кошелек для благодарностей нельзя тратить на себя и покупки в магазине
                         понравившихся товаров. Безусловно получаемые ломтики сотрудник может потратить только на
@@ -532,6 +533,95 @@
 
                 </ul>
             </div>
+
+
+        </div>
+        <div class="domestic-economy__sidebar-close"></div>
+    </div>
+    <div class="domestic-economy__overlay "></div>
+
+    <div class="domestic-economy__sidebar active" id="transfer">
+        <div class="domestic-economy__sidebar-wrap">
+            <h2>Перевести ломтики
+                <div class="domestic-economy__transfer-to">Александре Ивановой
+                    <div class="domestic-economy__transfer-to-photo"
+                         style="background-image: url(assets/img/avatars/avatar-1.png);"></div>
+                </div>
+            </h2>
+
+
+            <form action="#" class="domestic-economy__sidebar-wallet-form">
+                <div class="domestic-economy__sidebar-content-wallet">
+                    <div class="domestic-economy__sidebar-wallet-wrap">
+                        <div class="domestic-economy__sidebar-wallet">
+                            <div class="domestic-economy__sidebar-wallet-row">
+                                <span>Кошелек</span> <b>Для благодарностей</b>
+                            </div>
+                            <div class="domestic-economy__sidebar-wallet-row">
+                                <span>Баланс:</span> <strong>1 000 <i></i></strong>
+                            </div>
+
+
+                            <div class="domestic-economy__sidebar-wallet-transfer">
+                                <h4>Перевести:</h4>
+                                <input type="text" value="150"
+                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                <i></i>
+                            </div>
+
+                            <div class="domestic-economy__sidebar-wallet-limit">
+                                Лимит перевода для Ивановой А. А. — 350 Л.
+                            </div>
+                        </div>
+
+                        <div class="domestic-economy__sidebar-wallet">
+                            <div class="domestic-economy__sidebar-wallet-row">
+                                <span>Кошелек</span> <b>для покупок</b>
+                            </div>
+                            <div class="domestic-economy__sidebar-wallet-row">
+                                <span>Баланс:</span> <strong>1 000 <i></i></strong>
+                            </div>
+
+
+                            <div class="domestic-economy__sidebar-wallet-transfer">
+                                <h4>Перевести:</h4>
+                                <input type="text" value="200"
+                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                <i></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="domestic-economy__sidebar-wallet-data-row">
+                        <h4>Итого перевести:</h4>
+                        <div>
+                            <input type="text" value="350"
+                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            <i></i>
+                        </div>
+                    </div>
+
+                    <div class="domestic-economy__sidebar-wallet-data-row">
+                        <h4>Выбрать причину перевода:</h4>
+                        <select class="js-choice">
+                            <option value="">Выберите из списка</option>
+                            <option>Причина 1</option>
+                            <option>Причина 2</option>
+                            <option>Причина 3</option>
+                        </select>
+                    </div>
+                    <div class="domestic-economy__sidebar-wallet-data-row">
+                        <h4 class="domestic-economy__sidebar-textarea-title">Описать причину перевода:</h4>
+                        <textarea placeholder="Краткое описание причины"></textarea>
+                    </div>
+                </div>
+                <div class="domestic-economy__sidebar-wallet-footer">
+                    <input type="submit" value="Перевести ломтики">
+                    <a href="#" class="domestic-economy__sidebar-transfer-cancel">Отменить</a>
+                </div>
+            </form>
 
 
         </div>

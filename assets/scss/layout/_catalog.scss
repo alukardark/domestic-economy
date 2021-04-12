@@ -59,7 +59,7 @@
     & > li {
       align-items: center;
       display: flex;
-      margin: 5px 15px 5px 0;
+      margin: 5px 12px 5px 0;
       & > a {
         border: 1px solid #BAD3E4;
         display: flex;
@@ -109,14 +109,14 @@
     position: relative;
     min-width: 200px;
     text-align: right;
-    margin-right: 20px;
+    margin-right: 17px;
     & > ul {
       display: none;
       position: absolute;
       background: #fff;
       line-height: 1.2;
       transition: visibility .2s ease-in-out, max-height .45s ease-in-out, opacity .2s ease-in-out;
-      top: 100%;
+      top: 40px;
       right: -15px;
       overflow: hidden;
       z-index: 2;

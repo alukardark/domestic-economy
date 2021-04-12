@@ -204,6 +204,47 @@
       }
     }
   }
+  &__activity-btn{
+    width: 47px;
+    min-width: 47px;
+    height: 47px;
+    border: 2px solid #27C6F0;
+    border-radius: 3px;
+    position: relative;
+    transition: .2s ease-in-out opacity;
+    margin-left: 20px;
+    &:after{
+      content: '';
+      background: #27C6F0;
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: .3s ease-in-out transform;
+    }
+    &:before{
+      content: '';
+      background: #27C6F0;
+      height: 20px;
+      width: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: .3s ease-in-out transform;
+    }
+    &:hover{
+      opacity: .75;
+      &:after{
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      &:before{
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
   &__activity-list {
     display: flex;
     flex-direction: column;
@@ -372,12 +413,20 @@
           }
         }
       }
+      .domestic-economy__wallet-comment{
+        background: #4BC389;
+        &:after {
+          border-right-color: #4BC389;
+          border-bottom-color: #4BC389;
+        }
+      }
     }
   }
   &__wallet-row {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 2px;
   }
   &__wallet-combustion {
     background: #00ABD9;
@@ -427,6 +476,7 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
   }
   &__wallet-img {
     width: 31px;
@@ -503,6 +553,13 @@
       color: #4BC389;
       i {
         background: url(../img/currency-green.svg) center/contain no-repeat;
+      }
+    }
+    .domestic-economy__wallet-comment{
+      background: #4BC389;
+      &:after {
+        border-right-color: #4BC389;
+        border-bottom-color: #4BC389;
       }
     }
   }

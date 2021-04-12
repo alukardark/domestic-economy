@@ -37,17 +37,16 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         var sidebar = $(this).attr('data-sidebar');
         $('#'+sidebar).toggleClass('active');
-        $('.domestic-economy__wrapper').toggleClass('domestic-economy__sidebar--active');
     });
     $('.domestic-economy__sidebar-close').click(function(){
         $('.domestic-economy__sidebar.active').removeClass('active');
-        $('.domestic-economy__wrapper').removeClass('domestic-economy__sidebar--active');
     });
 
 
     $(".domestic-economy__filter-active").click(function(){
         $(this).next('ul').slideToggle(200);
     });
+
 
 
     $('.domestic-economy__product-count-minus').click(function () {
@@ -66,4 +65,48 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+    // Multiple images preview in browser
+    var imagesPreview = function(input, placeToInsertImagePreview) {
+        if (input.files) {
+            var filesAmount = input.files.length;
+
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+
+                reader.onload = function(event) {
+                    console.log(event.target.result);
+                    $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                };
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+    };
+    $('#domestic-economy__photos-add').on('change', function() {
+        imagesPreview(this, '.domestic-economy__photos');
+    });
+
 });
+
+
+
+const jsSelect = document.querySelector('.js-choice');
+if (jsSelect) {
+    new Choices(jsSelect, {
+        itemSelectText: '',
+        searchEnabled: false,
+        shouldSort: false,
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <link rel="stylesheet" href="assets/libs/slick-carousel-1.6.0/slick.min.css">
+    <link rel="stylesheet" href="assets/libs/choices/choices.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -28,7 +30,7 @@
                     </div>
                 </div>
                 <div class="domestic-economy__header-box">
-                    <div class="domestic-economy__header-box-title">Для радостей</div>
+                    <div class="domestic-economy__header-box-title">Для покупок</div>
                     <div>
                         <strong>13 684 <i></i></strong>
                     </div>
@@ -59,7 +61,6 @@
                 <div class="domestic-economy__history-date">16.12.2020</div>
                 <div class="domestic-economy__history-status domestic-economy__history-status--on-way">В пути</div>
                 <div class="domestic-economy__history-btn">
-                    <a href="#">Отменить покупку</a>
                 </div>
             </div>
             <div class="domestic-economy__history-row">
@@ -75,7 +76,7 @@
                 <div class="domestic-economy__history-status domestic-economy__history-status--delivered">Доставленно
                 </div>
                 <div class="domestic-economy__history-btn">
-                    <a href="#">Вернуть товар</a>
+                    <a href="#" data-sidebar="retur-goods">Вернуть товар</a>
                 </div>
 
             </div>
@@ -109,7 +110,7 @@
                 <div class="domestic-economy__history-status domestic-economy__history-status--delivered">Доставленно
                 </div>
                 <div class="domestic-economy__history-btn">
-                    <a href="#">Вернуть товар</a>
+                    <a href="#" data-sidebar="retur-goods">Вернуть товар</a>
                 </div>
             </div>
             <div class="domestic-economy__history-row">
@@ -139,15 +140,47 @@
                 <div class="domestic-economy__history-date">16.12.2020</div>
                 <div class="domestic-economy__history-status domestic-economy__history-status--on-way">В пути</div>
                 <div class="domestic-economy__history-btn">
-                    <a href="#">Отменить покупку</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="domestic-economy__sidebar " id="retur-goods">
+        <div class="domestic-economy__sidebar-wrap">
+            <h2>Вернуть товар</h2>
+
+
+            <div class="domestic-economy__sidebar-return-form-wrap">
+                <form action="#" class="domestic-economy__sidebar-return-form">
+                    <div class="domestic-economy__sidebar-return-coll">
+                        <h4>Опишите причину возврата:</h4>
+                        <textarea placeholder="Краткое описание причины"></textarea>
+                    </div>
+                    <div class="domestic-economy__sidebar-return-coll">
+                        <h4>Прикрепите фотографии:</h4>
+
+                        <div class="domestic-economy__photos"></div>
+
+                        <label for="domestic-economy__photos-add" class="domestic-economy__photos-add">Прикрепить
+                            фото</label>
+                        <input id="domestic-economy__photos-add" accept="image/*" multiple="multiple" type="file"
+                               value="Прикрепить фото" style="visibility:hidden;">
+                    </div>
+
+                </form>
+
+                <input type="submit" value="Отправить">
+            </div>
+
+        </div>
+        <div class="domestic-economy__sidebar-close"></div>
+    </div>
+    <div class="domestic-economy__overlay "></div>
 </div>
 
 <script src="assets/libs/jquery-3.6.0.min.js"></script>
 <script src="assets/libs/slick-carousel-1.6.0/slick.min.js"></script>
+<script src="assets/libs/choices/choices.min.js"></script>
 <script src="assets/js/common.js"></script>
 </body>
 </html>

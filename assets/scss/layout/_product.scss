@@ -304,6 +304,12 @@
     line-height: 0.85;
     transition: .2s ease-in-out opacity;
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     &:hover {
       opacity: .75;
     }
@@ -325,6 +331,12 @@
     justify-content: center;
     transition: .2s ease-in-out opacity;
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     &:hover {
       opacity: .75;
     }

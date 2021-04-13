@@ -46,6 +46,19 @@ jQuery(document).ready(function ($) {
     $(".domestic-economy__filter-active").click(function(){
         $(this).next('ul').slideToggle(200);
     });
+    $(document).mouseup(function (e){
+        var div = $(".domestic-economy__catalog-sort");
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            $(".domestic-economy__filter-active").next('ul').slideUp(200);
+        }
+    });
+
+
+
+    var str='123000000';
+    console.log(str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+
 
 
 

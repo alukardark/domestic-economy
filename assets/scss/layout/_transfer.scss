@@ -113,6 +113,13 @@
     border-radius: 20px;
     margin-top: auto;
     padding: 0 10px;
+    i {
+      display: inline-block;
+      margin-left: 1px;
+      width: 9px;
+      height: 9px;
+      background: url(../img/currency-white.svg) center/contain no-repeat;
+    }
   }
 
 

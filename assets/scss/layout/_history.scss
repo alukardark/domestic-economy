@@ -45,10 +45,17 @@
     }
   }
   &__history-photo{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     height: 125px;
+    &>a{
+      display: block;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      &:hover{
+        opacity: .75;
+      }
+    }
   }
   &__history-title-column{
     display: flex;
@@ -58,6 +65,9 @@
   &__history-title{
     font-weight: 600;
     line-height: 144.8%;
+    &:hover{
+      opacity: .7;
+    }
   }
   &__history-attr{
     font-size: 14px;

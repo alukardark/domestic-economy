@@ -204,6 +204,9 @@
       }
     }
   }
+  &__activity-text{
+    margin-right: 20px;
+  }
   &__activity-btn{
     width: 47px;
     min-width: 47px;
@@ -212,7 +215,7 @@
     border-radius: 3px;
     position: relative;
     transition: .2s ease-in-out opacity;
-    margin-left: 20px;
+    margin-left: auto;
     &:after{
       content: '';
       background: #27C6F0;
@@ -258,6 +261,15 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      &>a{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:hover{
+          opacity: .8;
+        }
+      }
     }
   }
   &__activity-content {
@@ -379,6 +391,11 @@
       strong {
         color: #27C6F0;
         font-weight: inherit;
+        cursor: pointer;
+        transition: .2s ease-in-out opacity;
+        &:hover{
+          opacity: .8;
+        }
       }
     }
 
@@ -705,6 +722,15 @@
     justify-content: space-between;
     margin: 0 17px;
     position: relative;
+    &>a{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      &:hover{
+        opacity: .8;
+      }
+    }
     &--hot {
       background: rgba(242, 206, 206, 0.6);
     }
@@ -732,23 +758,21 @@
     justify-content: space-between;
     padding: 0 20px 25px;
     flex-wrap: wrap;
-    a {
-      width: 132px;
-      height: 38px;
-      background: #27C6F0;
-      border-radius: 4px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 16px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:hover {
-        color: #fff;
-        opacity: .75;
-      }
-    }
+  }
+  &__favorites-btn{
+    width: 132px;
+    height: 38px;
+    background: #27C6F0;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-in-out opacity;
+
   }
   &__favorites-cost {
     font-weight: bold;
